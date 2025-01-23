@@ -10,7 +10,15 @@ const ToDoList = () => {
     setTasks([...tasks, { id: Date.now(), text: task, completed: false }]);
       setTask('');
   }
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
 
+  const toggleTask = (id) => {
+    setTasks(tasks.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task
+    ));
+  };
   return (
       <div >
         <input
@@ -26,6 +34,8 @@ const ToDoList = () => {
               <ToDoItemList
                   key={task.id}
                   task={task}
+                  toggleTask={toggleTask}
+                  deleteTask={deleteTask}
               />
           ))}
         </ul>
