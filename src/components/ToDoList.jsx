@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import ToDoItemList from './ToDoItemList.jsx';
 import './TodoList.css';
 
 const ToDoList = () => {
