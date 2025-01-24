@@ -26,6 +26,12 @@ button{
 .add-button:hover{
     background-color: hsl(125, 47%, 44%);
 }
+.update-button{
+    background-color: hsl(188, 66%, 47%);
+}
+.update-button:hover{
+    background-color: hsl(188, 66%, 47%);
+}
 .delete-button{
     background-color: hsl(10, 90%, 50%);
 }
@@ -62,7 +68,7 @@ li{
 .text{
     flex: 1;
 }
-.delete-button, .move-button{
+.update-button, .delete-button, .move-button{
     padding: 8px 12px;
     font-size: 1.4rem;
     margin-left: 10px;
